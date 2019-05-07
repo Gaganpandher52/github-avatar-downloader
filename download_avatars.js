@@ -4,6 +4,11 @@ var fs = require('fs');
 console.log('Welcome to the GitHub Avatar Downloader!');
 var first = process.argv[2];
 var second = process.argv[3];
+if(! first){
+    console.log("Please enter something - for example (something something): nodejs node")
+    process.exit();
+}
+
 
 function getRepoContributors(first, second, cb) {
     var options = {
